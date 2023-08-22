@@ -84,6 +84,7 @@ public class Handler {
                 + "\",\"LogicalResourceId\":\"" + eventMap.get("LogicalResourceId")
                 + "\",\"NoEcho\":false,\"Data\":{\"Key\":\"Value\"}}";
         System.out.println("Response JSON: " + responseJson);
+        System.out.println("Response URL: " + eventMap.get("ResponseURL"));
 
         var request = HttpRequest.newBuilder()
                 .uri(URI.create(eventMap.get("ResponseURL")))
